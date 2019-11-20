@@ -1,6 +1,8 @@
-# Scraping
-
 ---
+title: Scraping
+date: September, 2018
+---
+
 
 ## Terminology: Crawling vs Scraping
 
@@ -200,11 +202,11 @@ This poses a major problem for scraping, as the content we want isn't returned b
 
 ## Javascript
 
-The solution is to use a headless browser. 
+The solution is to use a headless browser.
 
-A headless browser is just a browser that does not render the content to a UI. 
+A headless browser is just a browser that does not render the content to a UI.
 
-Headless browsers can be embedded within your scraping program via a library, or run as a separate piece of software and accessed over HTTP. 
+Headless browsers can be embedded within your scraping program via a library, or run as a separate piece of software and accessed over HTTP.
 
 Popular options: Selenium and Splash
 
@@ -212,7 +214,7 @@ Popular options: Selenium and Splash
 
 ## Storing Data
 
-There are many options for storing data from scraping: 
+There are many options for storing data from scraping:
 
 * Flat files (json lines, csv, etc.)
 * Database
@@ -221,25 +223,25 @@ There are many options for storing data from scraping:
 
 ## Following Many Links
 
-Let's return to the problem of following links. 
+Let's return to the problem of following links.
 
-Often, the links grow expontentially in number as we scrape. 
+Often, the links grow expontentially in number as we scrape.
 
-This is because one page in a directory or search results might link to 10-20 "detail" pages which are often the ones we actually want data from. 
+This is because one page in a directory or search results might link to 10-20 "detail" pages which are often the ones we actually want data from.
 
-In other words, we might want to scrape thousands or millions of individual pages, but we won't have that list of pages ahead of time, we will build it as we go. 
+In other words, we might want to scrape thousands or millions of individual pages, but we won't have that list of pages ahead of time, we will build it as we go.
 
 ---
 
 ## Following Many Links
 
-How can we deal with this ever-growing list? 
+How can we deal with this ever-growing list?
 
 * Loops in loops in loops
 * Recursive function calls
 * A queue
 
-Which of these will work in a distributed or parallel framework? 
+Which of these will work in a distributed or parallel framework?
 
 Elegantly, only the quee.
 
@@ -247,10 +249,8 @@ Elegantly, only the quee.
 
 ## Production Scraping
 
-When you actually want to scrape a large site, you will need to make requests in parallel to get the speed needed. 
+When you actually want to scrape a large site, you will need to make requests in parallel to get the speed needed.
 
-You can build this yourself quite simply, or use a scraping library that gives you this for free. 
+You can build this yourself quite simply, or use a scraping library that gives you this for free.
 
-Scrapy is a Python library that gives you this, and much more, for free. It's a highly opinionated and structured library, so there is a learning curve, but it is well documented and popular. 
-
----
+Scrapy is a Python library that gives you this, and much more, for free. It's a highly opinionated and structured library, so there is a learning curve, but it is well documented and popular.
